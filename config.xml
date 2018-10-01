@@ -1,0 +1,14 @@
+<?xml version='1.0'?> 
+<config>
+	<database>
+		<host>localhost</host>
+		<username>root</username>
+		<password>Samperkins86!</password>
+		<dbName>SCEP</dbName>
+	</database>
+	<root>SCEP/vPanel</root>
+	<theme>default</theme>
+	<version>1.4.2</version>
+	<organization>The South Carolina Equine Park</organization>
+	<siteUrl>www.scequinepark.com</siteUrl>
+</config>

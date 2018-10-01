@@ -1,0 +1,664 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#vpanelSettings {
+	width:38px;
+	position:relative;
+	opacity:.8;
+	top:-4px;
+}
+
+.vpanelSettings:hover > #vpanelSettings {
+	opacity:1;
+}
+
+html {
+	min-height:100%;
+}
+
+body {
+	background: #206681;
+	background: -webkit-linear-gradient(left top, #efefef, #206681);
+	background: -o-linear-gradient(bottom right, #efefef, #206681);
+	background: -moz-linear-gradient(bottom right, #efefef, #206681);
+	background: linear-gradient(to bottom right, #efefef, #206681);
+	margin:0;
+	color: #ced1d2;
+}
+
+a {
+	color:blue;
+}
+
+.indent {
+	text-indent:2em;
+}
+
+.center {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+}
+
+.bold {
+	font-weight:bold;
+}
+
+.italic {
+	font-style:italic;
+}
+
+.clearfix {
+	clear:both;
+}
+
+header {
+	position:fixed;
+	width:100%;
+	z-index:100;
+	background-color:rgba(0,0,0,.7);
+	padding: 12px 6px 0px;
+	border-bottom:1px solid #000;
+	box-shadow:2px 0 8px #000;
+}
+
+header a {
+	color:#ced1d2;
+	text-decoration:none;
+}
+
+header a:hover {
+	color:#fff;
+	text-decoration:underline;
+}
+
+.vpLogo {
+	position:relative;
+	top:-2px;
+	display:inline-block;
+	width:165px;
+	text-align:center;
+	border-right:1px solid #3c3c3c;
+}
+
+.vpLogo img {
+	width:auto;
+	height:40px;
+}
+
+header .icons {
+	position:relative;
+	display:inline-block;
+	padding-left:20px;
+	margin:0;
+	list-style:none;
+	top:-6px;
+}
+
+header .icons li {
+	position:relative;
+	display:inline-block;
+	padding:0 20px;
+}
+	
+
+header .icon {
+	opacity:.9;
+	top: -3px;
+}
+
+header .icon:hover {
+	opacity:1;
+	cursor:pointer;
+}
+
+header .account {
+	position:relative;
+	float:right;
+	padding:0 10px;
+	margin:0;
+}
+
+header .account .name {
+	position:relative;
+	top:-6px;
+}
+
+
+header .profile {
+	display:inline-block;
+	padding:0 0 0 34px;
+	min-width: 152px;
+	text-align: right;
+	cursor:pointer;
+}
+
+header .profile .dropdown{
+	left:0;
+}
+
+header .menu .dropdown {
+	position:absolute;
+	background: rgba(0,0,0,.7);
+	padding: 20px 40px;
+	border: 1px solid #000;
+	border-top: 0;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	min-width:200px;
+	display:none;
+	text-align:left;
+	box-shadow:2px 4px 10px rgba(0,0,0,.5);
+}
+
+header .menu ul li {
+	padding-top:2px;
+}
+
+header .vpanelSettings .dropdown {
+	right:-10px;
+}
+
+header .menu:hover {
+	color:#fff;
+}
+
+
+header .menu:hover > ul {
+	display:block;
+}
+
+header .menu:hover > .icon {
+	opacity:1;
+}
+
+.profileIcon {
+	width:auto;
+	height:40px;
+	position: relative;
+}
+
+header .vpanelSettings {
+	position:relative;
+	float:right;
+	width: 64px;
+	text-align: right;
+	cursor:pointer;
+	list-style:none;
+	top:3px;
+}
+
+header .vpanelSettings #v-settings{
+	position:relative;
+}
+
+.mainContent {
+	float: left;
+	width:100%;
+	margin-top: 61px;
+	padding:0 10%;
+	color: #11283F;
+	text-align:center;
+}
+
+.mainContent .container {
+	background: rgba(255,255,255,.9);
+	padding: 6px 40px 16px;
+	border: 2px solid #5C6E80;
+	border-radius: 20px;
+	margin-top:20px;
+	display:inline-block;
+	text-align:left;
+	box-shadow:2px 4px 10px rgba(0,0,0,.5);
+	min-width: 430px;
+}
+
+.delete {
+	display:block;
+	/*display:inline-block;
+	float:right;
+	background:url('../graphics/trashSprite.png');
+	background-size:33px;
+	width:17px;
+	height:27px;
+	overflow:hidden;
+	text-indent:-99999px;
+	opacity:.6;
+	position: relative;
+	right: -16px;*/
+}
+
+
+.edit {
+	display:block;
+	/*display:inline-block;
+	float:right;
+	background:url('../graphics/edit.png');
+	background-size: 21px;
+	width: 20px;
+	height: 25px;
+	overflow: hidden;
+	text-indent: -99999px;
+	position: relative;
+	top: 2px;
+	right:-7px;*/
+}
+
+.create {
+	display:inline-block;
+	background:url('../graphics/create.png');
+	background-size: 18px;
+	width: 18px;
+	height: 18px;
+	overflow: hidden;
+	text-indent: -99999px;
+	position: relative;
+	top: 4px;
+	right:-7px;
+}
+
+
+.closeback {
+	float:right;
+	cursor:pointer;
+	position: relative;
+	top: 10px;
+	right:-18px;
+}
+
+.closeback a {
+	display:inline-block;
+	margin:0 0 0 5px;
+	background:url('../graphics/navSprite.png');
+	background-size:40px;
+	width:20px;
+	overflow:hidden;
+	text-indent:-9999px;
+	opacity:.8;
+}
+
+.closeback #back {
+	background-position: 20px 38px;
+}
+
+.closeback #back:hover {
+	background-position: 20px 57px;
+	opacity:1;
+}
+
+.closeback #close:hover {
+	background-position: 0px 57px;
+	opacity:1;
+}
+
+.login {
+	position:relative;
+	background:rgba(0,0,0,.7);
+	border:1px solid #fff;
+	border-radius:9px;
+	width:287px;
+	margin:7% auto 6px;
+	text-align:center;
+	padding: 0 20px 20px;
+	box-shadow:2px 0 8px #000;
+}
+
+.loginFailure {
+	top: 8px;
+	position: relative;
+	color: #f92c2c;
+}
+
+.loggedOut {
+	top: 8px;
+	position: relative;
+	color: #45cf72;
+}
+
+.login .button {
+	background: #fff;
+	background: -webkit-linear-gradient(left top, #fff, #94e5ff);
+	background: -o-linear-gradient(bottom right, #fff, #94e5ff);
+	background: -moz-linear-gradient(bottom right, #fff, #94e5ff);
+	background: linear-gradient(to bottom right, #fff, #94e5ff);
+	border: 2px solid #61c2ff;
+	border-radius: 17px;
+	padding: 5px 45px;
+	cursor:pointer;
+}
+
+.login .button:hover {
+	background: #fff;
+	background: -webkit-linear-gradient(left top, #94e5ff, #6ad0f0);
+	background: -o-linear-gradient(bottom right, #94e5ff, #6ad0f0);
+	background: -moz-linear-gradient(bottom right, #94e5ff, #6ad0f0);
+	background: linear-gradient(to bottom right, #94e5ff, #6ad0f0);
+	border: 2px solid #61c2ff;
+	border-radius: 17px;
+	padding: 5px 45px;
+	cursor:pointer;
+}
+
+.login .input {
+	padding:4px;
+	width:150px;
+}
+
+.login .input:focus {
+	border:2px solid #7FBFD8;
+}
+
+.userlist {
+	position:relative;
+	padding:5px 5px 1px;
+	margin:3px;
+}
+
+.userlist:hover {
+	border-radius: 3px;
+	-webkit-box-shadow:inset 0px 0px 0px 1px #bfbf9c;
+    -moz-box-shadow:inset 0px 0px 0px 1px #bfbf9c;
+    box-shadow:inset 0px 0px 0px 1px #bfbf9c;
+	background: #e8e8e8;
+}
+
+.userlist .editdelete {
+	display:none;
+	position: absolute;
+	right: 7px;
+	text-align:right;
+}
+
+.userlist:hover > .editdelete {
+	display:inline-block;
+}
+
+#addUser input[type=text], #addUser input[type=password], #addUser select, #addUser input[type=file] {
+	display:block;
+}
+
+#editUser input[type=text], #editUser input[type=password], #editUser select, #editUser input[type=file] {
+	display:block;
+}
+
+.col {
+	width: 42%;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	margin: 10px 20px 10px 0;
+}
+
+.colthree {
+	width: 27%;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	margin: 10px 20px 10px 0;
+}
+
+hr {
+	border: 0px none;
+    height: 1px;
+    background: transparent linear-gradient(to right, rgba(63, 129, 195, 0), rgba(63, 129, 195, 0.75), rgba(63, 129, 195, 0.75), rgba(63, 129, 195, 0)) repeat scroll 0% 0%;
+}
+
+.submit input[type=submit]{
+	margin-bottom:10px;
+	width:100%;
+}
+
+.editImg img {
+	float:right;
+	height:55px;
+	color:#fff0;
+}
+
+#message {
+	font-weight: 500;
+	color: #000;
+}
+.hide {
+	visibility:hidden;
+}
+
+.accounttypelist {
+	position:relative;
+	padding:8px;
+	margin:4px 0;
+	-webkit-box-shadow:inset 0px 0px 0px 1px #dbdbdbc;
+    -moz-box-shadow:inset 0px 0px 0px 1px #dbdbdb;
+    box-shadow:inset 0px 0px 0px 1px #dbdbdb;
+}
+
+.accounttypelist a {
+	display:inline-block;
+	padding:2px 4px;
+}
+
+.accounttypelist:hover {
+	-webkit-box-shadow:inset 0px 0px 0px 1px #bfbf9c;
+    -moz-box-shadow:inset 0px 0px 0px 1px #bfbf9c;
+    box-shadow:inset 0px 0px 0px 1px #bfbf9c;
+	background: #e8e8e8;
+}
+
+.accounttypelist .editdelete {
+	display:none;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+
+.accounttypelist:hover > .editdelete {
+	display:inline-block;
+}
+
+.privelagebox {
+	margin:4px;
+}
+
+.nameLabel, #accounttypename {
+	display:inline-block !important;
+}
+
+.imagenotice {
+    font-size: .8em;
+    font-style: italic;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+/* ----------------------------------------------------------------------------  ADDON STYLES --------------------------------------------------------------------------------- */
+
+
+
+
+#createSpecial textarea {
+	width:100%;
+	display:block;
+}
+
+#createMenuItem textarea {
+	width:100%;
+	display:block;
+}
+
+.price {
+	width:75px;
+}
+
+.name {
+	width:100%;
+}
+
+.enabled {
+	margin:10px 0;
+}
+
+.col.one{
+	width:58%;
+}
+
+.col.two{
+	width:26%;
+}
+
+.container.createSpecial, .container.editSpecials, .container.editSpecial, .container.createMenuItem, .container.editMenuItem, .container.editMenu{
+	min-width:520px;
+}
+
+.disabled {
+	color:#9c9c9c;
+}
+
+.disabled:hover {
+	color:#6f6f6f;
+}
+
+#save-order {
+	display:none;
+}
+
+.editSpecials ul {
+	list-style:none;
+	padding:0;
+	cursor:move;
+}
+
+.editMenu ul {
+	list-style:none;
+	padding:0;
+	cursor:move;
+}
+
+.editMenu .file {
+	margin:0 10px;
+	font-size:.76em;
+	font-style:italic;
+}
+
+.editMenu #uploadMenuFile input[name=uploadMenuFile]{
+	margin:5px 0;
+	display:block;
+	width:100%;
+}
+
+.editMenu #uploadMenuFile input[name=menuFile]{
+	margin:0 0 5px 0;
+}
+
+.editMenu #uploadMenuFile input[name=name]{
+	width:180px;
+}
+
+.editMenu #uploadMenuFile input[type=text]{
+	margin:0 0 5px 0;
+}
+
+.editMenu .accounttypelist {
+	margin:4px 0;
+}
+
+.editMenu .current {
+	-webkit-box-shadow:inset 0px 0px 0px 1px #68aae1;
+    -moz-box-shadow:inset 0px 0px 0px 1px #68aae1;
+    box-shadow:inset 0px 0px 0px 1px #68aae1;
+	color:#000;
+}
+
+.editMenu .current:hover {
+	background:#efefef;
+}
+
+.editMenu .current .makecurrent {
+	display:none;;
+}
+
+.threecol {
+	position:relative;
+	display:inline-block;
+	width:30%;
+	vertical-align:top;
+	margin: 0 40px 20px 0;
+}
+
+.threecol:nth-of-type(1){
+	float:right;
+	width:80px;
+}
+
+#editBusinessInfo input {
+    width: 100%;
+}
+
+#editBusinessInfo input[name=business_office_hours] {
+    width: 80%;
+}
+
+#editBusinessInfo input[type=submit]{
+    width: 200px;
+	float:right;
+}
+
+#editBusinessInfo .col {
+	width:45%;
+}
+
+#editHome textarea {
+	width:100%;
+	height:18em;
+}
+
+#editHome input[type=submit]{
+    width: 200px;
+	float:right;
+}
+
+#editHome input[type=text]{
+    width: 400px;
+}
+
+#editHome .col {
+	width:46%;
+}
+
+#editAbout textarea {
+	width:100%;
+	height:18em;
+}
+
+#editAbout input[type=submit]{
+    width: 200px;
+	float:right;
+}
+
+#editAbout input[type=text]{
+    width: 400px;
+}
+
+.sort {
+	float:right;
+}
+
+#editPrivacy textarea {
+	width:100%;
+	height:18em;
+}
+
+#editPrivacy input[type=submit]{
+    width: 200px;
+	float:right;
+}
+
+#editPrivacy input[type=text]{
+    width: 400px;
+}

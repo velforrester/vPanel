@@ -1,0 +1,8 @@
+Options All -Indexes -MultiViews
+
+DirectoryIndex index.php
+
+<Files "config.xml">
+Order Allow,Deny
+Deny from all
+</Files>
